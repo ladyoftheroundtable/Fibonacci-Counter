@@ -13,7 +13,7 @@ let maxFIndex = 0;
 for (let i = 0; i < iterations; i++)
 {
     startTime = performance.now();
-    while (runTime >= timeElapsed)
+    while (runTime >= (performance.now() - startTime))
     {
         temp = a;
         a = a + b;
@@ -26,8 +26,7 @@ for (let i = 0; i < iterations; i++)
         b = b ^ a;
         a = a ^ b;
         */
-        currentTime = performance.now();
-        timeElapsed += currentTime - startTime;
+
         /*
         if (a == Infinity)
         {
